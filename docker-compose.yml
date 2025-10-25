@@ -1,0 +1,25 @@
+services:
+  server:
+    build: ./server
+    image: simple-microservice-test-server
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_APP: app.py
+      FLASK_ENV: development
+  service1:
+    build: ./service1
+    image: simple-microservice-test-service1
+    ports:
+      - "5001:5001"
+    environment:
+      FLASK_APP: app.py
+      FLASK_ENV: development
+  service2:
+    build: ./service2
+    image: simple-microservice-test-service2
+    ports:
+      - "5002:5002"
+    environment:
+      FLASK_APP: app.py
+      FLASK_ENV: development

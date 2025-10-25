@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+  <title>Main</title>
+</head>
+
+
+<header>
+  <h1>Microservice Test</h1>
+</header>
+<body class="fixed-body">
+  <div class="ping">
+    <button id="ping-s1">Ping to Service 1</button>
+    <span id="ping-s1-message" class="ping-message"></span>
+  </div>
+  <div class="ping">
+    <button id="ping-s2">Ping to Service 2</button>
+    <span id="ping-s2-message" class="ping-message"></span>
+  </div>
+  
+  <footer>
+    Website by Thomas Sharp
+  </footer>
+  <script src="{{ url_for('static',filename='scripts/index.js') }}"></script>
+</body>
+</html>
