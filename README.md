@@ -8,7 +8,7 @@ Make sure you have [docker desktop](https://www.docker.com/products/docker-deskt
 unable to get image 'simple-microservice-test-service1': error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.51/images/simple-microservice-test-service1/json": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified
 ```
 
-You don't need pip for this project, all instilations are done during image creation.
+You don't need pip for this project, all installations are done during image creation.
 
 ## Usage
 
@@ -40,7 +40,7 @@ def connect():
 def ping():
     return jsonify({"message": "Hello from Service X!"})
 ```
-The important part here is the CORS part. If you don't use that set that up it won't allow for cross referencing meaning you'll be unable to make a request to that service.
+The important part here is the CORS part. If you don't use that set up it won't allow for cross referencing meaning you'll be unable to make a request to that service.
 
 The other two parts that are important for this project are the Dockerfile and the requirements.txt file.
 
@@ -50,7 +50,7 @@ The Dockerfile tells the docker-composer how to compile the microservice, and al
 WORKDIR /my-microservice-directory
 ```
 
-Finally the docker-compose.yml file allows Docker to build and run all the microservices at the same time using only one command. Each of the services is listed out with imortant information like where to find the Dockerfile, the image name, the ports, and the flask enviorement settings. 
+Finally the docker-compose.yml file allows Docker to build and run all the microservices at the same time using only one command. Each of the services are listed out with important information like where to find the Dockerfile, the image name, the ports, and the flask environment settings. 
 
 ## How do I ping the microservices?
 
